@@ -14,7 +14,7 @@
     --mantle: rgba(24, 24, 37, 0.5);
     --crust: rgba(17, 17, 27, 0.2);
     --main: #10151d;
-    --widget-background: #24273a;
+    --widget-background: rgba(36, 39, 58, 0.6);
 
     /* Additional colors */
     --button-hover: #babfd3;
@@ -40,9 +40,6 @@
     --font-xl: 24px;   /* Weather location */
     --font-2xl: 64px;  /* Power menu icons */
     --font-3xl: 88px;  /* Calendar date */
-
-    /* Special font sizes */
-    --font-media-play: 17px;
 
     /* Common Values */
     --standard-radius: 8px;
@@ -116,6 +113,11 @@ QToolTip {
     background-color: var(--widget-background);
     margin: 2px 0;
     border-radius: var(--standard-radius);
+}
+
+/* Clock Widget */
+.clock-widget .widget-container {
+    background-color: var(--transparent);
 }
 
 /* CPU & Memory Widget Pair */
@@ -358,7 +360,7 @@ QToolTip {
 }
 
 .media-widget .btn:hover { color: var(--button-hover); }
-.media-widget .btn.play { font-size: var(--font-media-play); }
+.media-widget .btn.play { font-size: var(--font-lg); }
 
 .media-widget .btn.disabled:hover,
 .media-widget .btn.disabled {
