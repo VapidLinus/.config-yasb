@@ -222,7 +222,7 @@ widgets:
       api_key: "3bf4cf9a7c3f40d6b31174128242807"
       update_interval: 600
       hide_decimal: true
-      location: "USA Los Angeles 90006"
+      location: "Enköping, Uppsala, Sweden"
       callbacks:
         on_left: "toggle_card"
         on_right: "toggle_label"
