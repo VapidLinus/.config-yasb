@@ -1,3 +1,4 @@
+/* Color Variables and Theme */
 :root {
     --red: #f38ba8;
     --yellow: #f9e2af;
@@ -13,15 +14,12 @@
     --crust: rgba(17, 17, 27, 0.2);
     --main: #10151d;
     --widget-background: #24273a;
+
+    /* Common Values */
+    --standard-radius: 8px;
 }
-QToolTip {
-    padding: 6px;
-    color: #cdd6f4;
-    font-size: 12px;
-    background-color: #1e1e2e;
-    border: 0px solid #313244;
-    border-radius: 6px;
-}
+
+/* Global Styles */
 * {
     font-size: 12px;
     color: var(--blue);
@@ -30,21 +28,52 @@ QToolTip {
     margin: 0;
     padding: 0;
 }
+
+QToolTip {
+    padding: 6px;
+    color: var(--text);
+    font-size: 12px;
+    background-color: var(--base);
+    border: 0;
+    border-radius: var(--standard-radius);
+}
+
+/* Layout Elements */
 .yasb-bar {
     padding: 0 10px;
-    margin: 0;
     background-color: var(--mantle);
 }
+
 .widget {
     padding: 0 2px;
-    margin: 0;
 }
+
+.widget .label {
+    padding: 0 2px;
+}
+
+/* Common Icon Styles */
 .icon {
     font-size: 14px;
 }
-.widget .label {
-    padding: 0px 2px;
+
+/* Green Icons */
+.clock-widget .icon,
+.volume-widget .icon,
+.cpu-widget .icon,
+.memory-widget .icon,
+.notification-widget .icon {
+    color: var(--green);
+    margin-right: 4px;
 }
+
+.weather-widget .icon {
+    font-size: 18px;
+    margin: 0 4px 1px 0;
+    color: var(--green);
+}
+
+/* Widget Containers - only apply background to specific widgets */
 .clock-widget .widget-container,
 .volume-widget .widget-container,
 .weather-widget .widget-container,
@@ -56,78 +85,69 @@ QToolTip {
 .komorebi-workspaces .widget-container,
 .komorebi-active-layout .widget-container {
     background-color: var(--widget-background);
-    margin: 2px 0 2px 0;
-    border-radius: 8px;
+    margin: 2px 0;
+    border-radius: var(--standard-radius);
 }
-.cpu-widget {
-    padding-right: 0;
-}
-.memory-widget {
-    padding-left: 0;
-}
+
+/* CPU & Memory Widget Pair */
+.cpu-widget { padding-right: 0; }
+.memory-widget { padding-left: 0; }
+
 .cpu-widget .widget-container {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
 }
+
 .memory-widget .widget-container {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
 }
+
+/* Komorebi Workspaces */
 .komorebi-workspaces .offline-status {
     color: var(--blue);
-    font-size: 12px;
     padding: 0 0 0 4px;
-    font-weight: 600;
 }
+
 .komorebi-workspaces .ws-btn {
     border: none;
-    margin: 0;
     font-size: 14px;
     color: var(--blue);
     height: 28px;
     width: 18px;
 }
-.komorebi-workspaces .ws-btn:hover {
-    color: var(--lavender);
-}
-.komorebi-workspaces .ws-btn.populated {
-    color: var(--green);
-}
-.komorebi-workspaces .ws-btn.active {
-    color: var(--green);
-}
+
+.komorebi-workspaces .ws-btn:hover { color: var(--lavender); }
+.komorebi-workspaces .ws-btn.populated,
+.komorebi-workspaces .ws-btn.active { color: var(--green); }
+
+/* Apps Widget */
 .apps-widget .label {
     font-size: 16px;
     padding: 0 1px;
 }
-.apps-widget .label:hover {
-    color: var(--text);
-}
-.clock-widget .icon {
-    color: var(--green);
-    margin-right: 4px;
-}
-.calendar {
-    background-color: var(--crust)
-}
+
+.apps-widget .label:hover { color: var(--text); }
+
+/* Calendar */
+.calendar { background-color: var(--crust); }
+
 .calendar .calendar-table,
 .calendar .calendar-table::item {
-    background-color: rgba(17, 17, 27, 0);
+    background-color: transparent;
     color: rgba(162, 177, 196, 0.85);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
     border: none;
     outline: none;
 }
+
 .calendar .calendar-table::item:selected {
     color: var(--main);
-    border-radius: 8px;
+    border-radius: var(--standard-radius);
     background-color: var(--blue);
 }
-.calendar .day-label {
-    margin-top: 20px;
-}
+
+/* Calendar Labels */
 .calendar .day-label,
 .calendar .month-label,
 .calendar .date-label {
@@ -138,87 +158,79 @@ QToolTip {
     min-width: 180px;
     max-width: 180px;
 }
-.calendar .month-label {
-    font-weight: normal;
-}
+
+.calendar .day-label { margin-top: 20px; }
+.calendar .month-label { font-weight: normal; }
 .calendar .date-label {
     font-size: 88px;
     font-weight: 900;
-    color: var(--blue);
     margin-top: -20px;
 }
-.power-menu-widget .label {
-    font-size: 14px;
-}
-.power-menu-popup {
-    background-color: transparent
-}
+
+/* Power Menu */
+.power-menu-widget .label { font-size: 14px; }
+.power-menu-popup { background-color: transparent; }
+
 .power-menu-popup .button {
-    padding: 0;
     width: 180px;
     height: 230px;
-    border-radius: 8px;
+    border-radius: var(--standard-radius);
     background-color: var(--crust);
     color: var(--text);
-    border-left: 10px solid rgba(58, 59, 83, 0);
-    border-right: 10px solid rgba(58, 59, 83, 0);
-    border-top: 10px solid rgba(58, 59, 83, 0);
-    border-bottom: 10px solid rgba(58, 59, 83, 0);
-    margin: 0px;
+    border: 10px solid rgba(58, 59, 83, 0);
 }
+
 .power-menu-popup .button.hover {
     background-color: var(--base);
-    border-left: 10px solid var(--base);
-    border-right: 10px solid var(--base);
-    border-top: 10px solid var(--base);
-    border-bottom: 10px solid var(--base);
+    border: 10px solid var(--base);
 }
+
 .power-menu-popup .button .label {
     margin-bottom: 8px;
     font-size: 16px;
     font-weight: 500;
-    color: var(--overlay2)
+    color: var(--overlay2);
 }
+
 .power-menu-popup .button .icon {
     font-size: 64px;
     padding-top: 32px;
-    color: var(--surface2)
+    color: var(--surface2);
 }
-.power-menu-popup .button.cancel .icon {
-    padding: 0;
-    margin: 0;
-}
-.power-menu-popup .button.cancel .label {
-    margin: 0;
-}
+
 .power-menu-popup .button.cancel {
     height: 32px;
     border-radius: 4px;
 }
+
+.power-menu-popup .button.cancel .icon,
+.power-menu-popup .button.cancel .label {
+    padding: 0;
+    margin: 0;
+}
+
 .power-menu-popup .button.hover .label,
 .power-menu-popup .button.hover .icon {
     color: var(--green);
 }
+
 .uptime {
     font-size: 16px;
     margin-bottom: 10px;
     color: var(--overlay2);
-    font-weight: 600;
 }
-.volume-widget .icon {
-    color: var(--green);
-    margin-right: 4px;
-}
-.volume-slider {
-    border: none;
-}
+
+/* Volume Controls */
+.volume-slider { border: none; }
+
 .volume-slider::groove {
     background-color: var(--blue);
     border-radius: 2px;
     height: 4px;
     margin: 4px 0;
 }
-.volume-slider::handle{
+
+.volume-slider::handle {
     background-color: var(--blue);
     border: none;
     height: 16px;
@@ -226,134 +238,106 @@ QToolTip {
     margin: -8px 0;
     border-radius: 2px;
 }
-.audio-menu {
-    background-color:var(--crust);
-}
+
+/* Audio Menu */
+.audio-menu { background-color: var(--crust); }
+
 .audio-container .device {
-    background-color:transparent;
+    background-color: transparent;
     border: none;
-    padding:6px 8px 6px 4px;
+    padding: 6px 8px 6px 4px;
     margin: 2px 0;
-    font-size: 12px;
     border-radius: 4px;
 }
-.audio-container .device.selected {
-    background-color: rgba(255, 255, 255, 0.085);
-}
-.audio-container .device:hover {
-    background-color: rgba(255, 255, 255, 0.06);
-}
-.weather-widget .icon {
-    font-size: 18px;
-    margin: 0 4px 1px 0;
-    color: var(--green);
-}
-.weather-card {
-    background-color:var(--crust);
-}
 
-.weather-card-today .label {
-    font-size: 12px;
-}
+.audio-container .device.selected { background-color: rgba(255, 255, 255, 0.085); }
+.audio-container .device:hover { background-color: rgba(255, 255, 255, 0.06); }
+
+/* Weather Components */
+.weather-card { background-color: var(--crust); }
+.weather-card-today .label { font-size: 12px; }
+
 .weather-card-today .label.location {
     font-size: 24px;
     font-weight: 700;
 }
+
 .weather-card-today .label.arert {
-    font-size: 12px;
-    font-weight: 700;
     background-color: rgba(247, 199, 42, 0.05);
     border: 1px solid rgba(247, 209, 42, 0.1);
     color: rgba(196, 181, 162, 0.85);
     border-radius: 6px;
     padding: 5px 0;
+    font-weight: 700;
 }
+
 .weather-card-day {
-    border-radius: 8px;
+    border-radius: var(--standard-radius);
     background-color: var(--crust);
 }
-.weather-card-day .label {
-    font-size: 12px;
-}
+
+/* Taskbar */
 .taskbar-widget {
     padding: 0;
     margin: 0;
     border: none;
 }
+
 .taskbar-widget .app-icon {
     padding: 0 6px;
     border: none;
-    margin: 0;
 }
-.home-widget {
-    padding: 2px 4px 2px 0px;
-}
+
+/* Home Widget */
+.home-widget { padding: 2px 4px 2px 0; }
 .home-widget .widget-container {
     background-color: var(--widget-background);
-    border-radius: 8px;
+    border-radius: var(--standard-radius);
 }
-.home-widget .icon:hover {
-    color: var(--text);
-}
-.home-menu {
-    background-color: var(--crust);
-}
+.home-widget .icon:hover { color: var(--text); }
+.home-menu { background-color: var(--crust); }
+
 .home-menu .menu-item {
     padding: 8px 48px 9px 16px;
     font-size: 12px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text);
-    font-weight: 600;
 }
+
 .home-menu .menu-item:hover {
     background-color: rgba(157, 180, 141, 0.116);
     color: #fff;
 }
+
 .home-menu .separator {
     max-height: 1px;
     background-color: rgba(157, 180, 141, 0.116);
 }
+
+/* Media Widget */
 .media-widget {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
     border-radius: 0;
 }
-.media-widget .label {
-	color: var(--blue);
-    padding: 0px;
-	padding-left: 8px;
-	font-size: 12px;
-}
+
+.media-widget .label { padding: 0 0 0 8px; }
+
 .media-widget .btn {
-	color: var(--blue);
-	padding:0 1px;
-	margin: 0;
+    padding: 0 1px;
     font-size: 12px;
 }
-.media-widget .btn:hover {
-	color: #babfd3;
-}
-.media-widget .btn.play {
-	font-size: 17px;
-}
+
+.media-widget .btn:hover { color: #babfd3; }
+.media-widget .btn.play { font-size: 17px; }
+
 .media-widget .btn.disabled:hover,
 .media-widget .btn.disabled {
-	color: var(--surface1);
+    color: var(--surface1);
 }
-.notification-widget .icon {
-    color: var(--green);
-}
-.notification-widget .icon.new-notification {
-    color: var(--red);
-}
+
+/* Notification States */
+.notification-widget .icon.new-notification,
 .notification-widget .label.new-notification {
     color: var(--red);
-}
-.cpu-widget .icon {
-    color: var(--green);
-    margin-right: 4px;
-}
-.memory-widget .icon {
-    color: var(--green);
-    margin-right: 4px;
 }
