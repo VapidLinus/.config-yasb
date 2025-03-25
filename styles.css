@@ -33,13 +33,13 @@
     --font-ui: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     /* Font size scale */
-    --font-xs: 12px;   /* Base size for most text */
-    --font-sm: 14px;   /* Icons, power menu label */
-    --font-md: 16px;   /* Apps widget, calendar labels, menu buttons */
-    --font-lg: 18px;   /* Weather icon */
-    --font-xl: 24px;   /* Weather location */
-    --font-2xl: 64px;  /* Power menu icons */
-    --font-3xl: 88px;  /* Calendar date */
+    --font-xs: 12px; /* Base size for most text */
+    --font-sm: 14px; /* Icons, power menu label */
+    --font-md: 16px; /* Apps widget, calendar labels, menu buttons */
+    --font-lg: 18px; /* Weather icon */
+    --font-xl: 24px; /* Weather location */
+    --font-2xl: 64px; /* Power menu icons */
+    --font-3xl: 88px; /* Calendar date */
 
     /* Common Values */
     --standard-radius: 8px;
@@ -121,8 +121,12 @@ QToolTip {
 }
 
 /* CPU & Memory Widget Pair */
-.cpu-widget { padding-right: 0; }
-.memory-widget { padding-left: 0; }
+.cpu-widget {
+    padding-right: 0;
+}
+.memory-widget {
+    padding-left: 0;
+}
 
 .cpu-widget .widget-container {
     border-bottom-right-radius: 0;
@@ -148,9 +152,13 @@ QToolTip {
     width: 18px;
 }
 
-.komorebi-workspaces .ws-btn:hover { color: var(--lavender); }
+.komorebi-workspaces .ws-btn:hover {
+    color: var(--lavender);
+}
 .komorebi-workspaces .ws-btn.populated,
-.komorebi-workspaces .ws-btn.active { color: var(--green); }
+.komorebi-workspaces .ws-btn.active {
+    color: var(--green);
+}
 
 /* Apps Widget */
 .apps-widget .label {
@@ -158,10 +166,14 @@ QToolTip {
     padding: 0 1px;
 }
 
-.apps-widget .label:hover { color: var(--text); }
+.apps-widget .label:hover {
+    color: var(--text);
+}
 
 /* Calendar */
-.calendar { background-color: var(--crust); }
+.calendar {
+    background-color: var(--crust);
+}
 
 .calendar .calendar-table,
 .calendar .calendar-table::item {
@@ -190,8 +202,12 @@ QToolTip {
     max-width: 180px;
 }
 
-.calendar .day-label { margin-top: 20px; }
-.calendar .month-label { font-weight: normal; }
+.calendar .day-label {
+    margin-top: 20px;
+}
+.calendar .month-label {
+    font-weight: normal;
+}
 .calendar .date-label {
     font-size: var(--font-3xl);
     font-weight: 900;
@@ -199,8 +215,12 @@ QToolTip {
 }
 
 /* Power Menu */
-.power-menu-widget .label { font-size: var(--font-sm); }
-.power-menu-popup { background-color: transparent; }
+.power-menu-widget .label {
+    font-size: var(--font-sm);
+}
+.power-menu-popup {
+    background-color: transparent;
+}
 
 .power-menu-popup .button {
     width: 180px;
@@ -252,7 +272,9 @@ QToolTip {
 }
 
 /* Volume Controls */
-.volume-slider { border: none; }
+.volume-slider {
+    border: none;
+}
 
 .volume-slider::groove {
     background-color: var(--blue);
@@ -271,7 +293,9 @@ QToolTip {
 }
 
 /* Audio Menu */
-.audio-menu { background-color: var(--crust); }
+.audio-menu {
+    background-color: var(--crust);
+}
 
 .audio-container .device {
     background-color: transparent;
@@ -281,12 +305,20 @@ QToolTip {
     border-radius: 4px;
 }
 
-.audio-container .device.selected { background-color: var(--device-selected); }
-.audio-container .device:hover { background-color: var(--device-hover); }
+.audio-container .device.selected {
+    background-color: var(--device-selected);
+}
+.audio-container .device:hover {
+    background-color: var(--device-hover);
+}
 
 /* Weather Components */
-.weather-card { background-color: var(--crust); }
-.weather-card-today .label { font-size: var(--font-xs); }
+.weather-card {
+    background-color: var(--crust);
+}
+.weather-card-today .label {
+    font-size: var(--font-xs);
+}
 
 .weather-card-today .label.location {
     font-size: var(--font-xl);
@@ -320,13 +352,19 @@ QToolTip {
 }
 
 /* Home Widget */
-.home-widget { padding: 2px 4px 2px 0; }
+.home-widget {
+    padding: 2px 4px 2px 0;
+}
 .home-widget .widget-container {
     background-color: var(--widget-background);
     border-radius: var(--standard-radius);
 }
-.home-widget .icon:hover { color: var(--text); }
-.home-menu { background-color: var(--crust); }
+.home-widget .icon:hover {
+    color: var(--text);
+}
+.home-menu {
+    background-color: var(--crust);
+}
 
 .home-menu .menu-item {
     padding: 8px 48px 9px 16px;
@@ -352,15 +390,21 @@ QToolTip {
     border-radius: 0;
 }
 
-.media-widget .label { padding: 0 0 0 8px; }
+.media-widget .label {
+    padding: 0 0 0 8px;
+}
 
 .media-widget .btn {
     padding: 0 1px;
     font-size: var(--font-xs);
 }
 
-.media-widget .btn:hover { color: var(--button-hover); }
-.media-widget .btn.play { font-size: var(--font-lg); }
+.media-widget .btn:hover {
+    color: var(--button-hover);
+}
+.media-widget .btn.play {
+    font-size: var(--font-lg);
+}
 
 .media-widget .btn.disabled:hover,
 .media-widget .btn.disabled {
