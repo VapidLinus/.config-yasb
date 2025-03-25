@@ -42,7 +42,6 @@ bars:
       right: [
         "taskbar",
         "media",
-        "cpu",
         "memory",
         "weather",
         "volume",
