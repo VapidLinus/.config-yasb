@@ -128,6 +128,12 @@ QToolTip {
     border-radius: var(--standard-radius);
 }
 
+/* Widgets with smaller fonts */
+.komorebi-active-layout .label,
+.komorebi-workspaces .ws-btn {
+    font-size: var(--font-2xs)
+}
+
 /* Clock Widget */
 .clock-widget .widget-container {
     background-color: var(--transparent);
@@ -159,18 +165,20 @@ QToolTip {
 
 .komorebi-workspaces .ws-btn {
     border: none;
-    font-size: var(--font-sm);
     color: var(--blue);
     height: 28px;
-    width: 18px;
+    padding: 0 4px 0 4px;
+}
+
+.komorebi-workspaces .ws-btn.populated {
+    color: var(--soft-purple)
+}
+.komorebi-workspaces .ws-btn.active {
+    color: var(--green);
 }
 
 .komorebi-workspaces .ws-btn:hover {
     color: var(--lavender);
-}
-.komorebi-workspaces .ws-btn.populated,
-.komorebi-workspaces .ws-btn.active {
-    color: var(--green);
 }
 
 /* Apps Widget */
