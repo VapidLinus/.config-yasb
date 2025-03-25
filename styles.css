@@ -6,6 +6,18 @@
     --green: #a6e3a1;
     --blue: #89b4fa;
     --lavender: #b4befe;
+
+    /* Recommended Additional Colors */
+    --soft-teal: #94e2d5;
+    --soft-purple: #cba6f7;
+    --soft-orange: #fab387;
+    --soft-yellow: #f9e2af;
+    --soft-red: #f38ba8;
+    --muted-green: #8ec07c;
+    --muted-blue: #7daea3;
+    --pastel-pink: #f5c2e7;
+    --pastel-yellow: #f5e0dc;
+
     --text: #cdd6f4;
     --overlay2: #9399b2;
     --surface2: #585b70;
@@ -33,6 +45,7 @@
     --font-ui: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     /* Font size scale */
+    --font-2xs: 10px;
     --font-xs: 12px; /* Base size for most text */
     --font-sm: 14px; /* Icons, power menu label */
     --font-md: 16px; /* Apps widget, calendar labels, menu buttons */
