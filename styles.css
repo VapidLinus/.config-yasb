@@ -131,7 +131,7 @@ QToolTip {
 /* Widgets with smaller fonts */
 .komorebi-active-layout .label,
 .komorebi-workspaces .ws-btn {
-    font-size: var(--font-2xs)
+    /* font-size: var(--font-2xs) */
 }
 
 /* Clock Widget */
