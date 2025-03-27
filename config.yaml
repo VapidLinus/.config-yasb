@@ -312,11 +312,9 @@ widgets:
         - { icon: "\uf422", launch: "search" }
         - { icon: "\ueb03", launch: "cmd /c Taskmgr" }
         - { icon: "\uf489", launch: "wt" }
-        - { icon: "\ue721",launch: "C:\\Program Files\\Unity Hub\\Unity Hub.exe" }
-        - { icon: "\ue88f",launch: "C:\\Users\\micro\\AppData\\Local\\JetBrains\\Toolbox\\bin\\jetbrains-toolbox.exe" }
+        - { icon: "\ue88f",launch: "C:\\Users\\linnar\\AppData\\Local\\JetBrains\\Toolbox\\bin\\jetbrains-toolbox.exe" }
         - { icon: "\ue8da",launch: "C:\\Users\\micro\\AppData\\Local\\Programs\\Fleet\\Fleet.exe" }
         - { icon: "\udb80\ude39",launch: "C:\\Program Files\\Zen Browser\\zen.exe" }
-        - { icon: "\uf1ff",launch: "C:\\Users\\micro\\AppData\\Local\\Discord\\Update.exe --processStart Discord.exe" }
   taskbar:
     type: "yasb.taskbar.TaskbarWidget"
     options:
